@@ -11,10 +11,10 @@ function App() {
   return (
     <>
       <header role="banner">
-        <a href="https://vitejs.dev" target="_blank">
+        <a href="https://vitejs.dev" title="Vite" target="_blank">
           <Logo src={viteLogo} alt="Vite logo" />
         </a>
-        <a href="https://react.dev" target="_blank">
+        <a href="https://react.dev" title="React" target="_blank">
           <Logo src={reactLogo} alt="React logo" />
         </a>
       </header>

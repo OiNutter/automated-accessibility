@@ -35,6 +35,10 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
@@ -58,12 +62,5 @@ export default defineConfig({
     //   name: 'Google Chrome',
     //   use: { ...devices['Desktop Chrome'], channel: 'chrome' },
     // },
-  ],
-
-  /* Run your local dev server before starting the tests */
-  /*  webServer: {
-     command: 'yarn dev',
-     url: 'http://localhost:5173/',
-     reuseExistingServer: !process.env.CI,
-   }, */
+  ]
 });
