@@ -30,7 +30,6 @@ test('is navigatable', async ({ page }) => {
   await header.waitFor();
 
   await page.keyboard.press("Alt+Tab")
-  console.log("FOCUSED", await page.evaluate(() => document.activeElement?.innerHTML))
   await expect(await page.getByRole("link", {name: "Vite"})).toBeFocused()
 
   await page.keyboard.press("Alt+Tab")
