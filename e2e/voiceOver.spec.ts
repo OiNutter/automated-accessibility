@@ -1,7 +1,7 @@
 import { voiceOverTest as test } from "@guidepup/playwright";
 import { expect } from "@playwright/test";
 
-test.skip("I can navigate the page", async ({
+test("I can navigate the page", async ({
     page,
     voiceOver,
   }) => {
@@ -25,10 +25,11 @@ test.skip("I can navigate the page", async ({
       console.log("Item Text", await voiceOver.itemText())
     }
     
-    await voiceOver.perform(voiceOver.keyboardCommands.findNextDifferentItem);
+    await voiceOver.perform(voiceOver.keyboardCommands.findNextControl);
     expect(await voiceOver.itemText()).toBe("count is 0 button")
-    await voiceOver.perform(voiceOver.commanderCommands.CLICK_MOUSE);
-    //console.log("item", await voiceOver.)
+    console.log("item", await voiceOver.itemText())
+    
+    await voiceOver.press("Control+Alt+Space")
     expect(await voiceOver.itemText()).toBe("count is 1 button")
 
     // Assert that the spoken phrases are as expected
