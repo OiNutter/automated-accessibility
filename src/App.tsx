@@ -12,10 +12,10 @@ function App() {
     <>
       <header role="banner">
         <a href="https://vitejs.dev" title="Vite" target="_blank">
-          <Logo src={viteLogo} alt="Vite logo" />
+          <Logo src={viteLogo} alt="Vite logo" className="vite"/>
         </a>
         <a href="https://react.dev" title="React" target="_blank">
-          <Logo src={reactLogo} alt="React logo" />
+          <Logo src={reactLogo} alt="React logo" className="react"/>
         </a>
       </header>
       <main>
