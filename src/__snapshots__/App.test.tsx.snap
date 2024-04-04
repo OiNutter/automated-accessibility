@@ -1,0 +1,18 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`App > should be screen reader friendly 1`] = `
+[
+  "banner",
+  "link, Vite logo, Vite",
+  "img, Vite logo",
+  "end of link, Vite logo, Vite",
+  "link, React logo, React",
+  "img, React logo",
+  "end of link, React logo, React",
+  "end of banner",
+  "main",
+  "heading, Vite + React, level 1",
+  "button, count is 0",
+  "button, count is 1",
+]
+`;
