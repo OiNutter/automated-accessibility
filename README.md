@@ -1,30 +1,40 @@
-# React + TypeScript + Vite
+# Automated Accessibility Experiments
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Supporting repo for [Will It Automate? Accessibility Testing](https://blog.scottlogic.com/2024/04/03/will-it-automate-accessibility-testing.html).
 
-Currently, two official plugins are available:
+This repo contains some very basic experiments/examples for adding accessibility testing to your automated test suites.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Setup
 
-## Expanding the ESLint configuration
+Clone/Download the repo and run:
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```
+$ yarn install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+To run the screen reader tests you'll need to setup Guidepup:
+
+```
+$ npx @guidepup/setup
+```
+
+## Run the tests
+
+### Unit
+
+```
+$ yarn test
+```
+
+### Playwright
+
+
+```
+$ yarn playwright test
+```
+
+## Run the app
+
+```
+$ yarn dev
+```
